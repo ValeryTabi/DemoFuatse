@@ -1,0 +1,90 @@
+﻿@model IEnumerable<DemoFua.Models.Company>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutInside.cshtml";
+}
+
+<h2>List of Companies</h2>
+<hr />
+
+<br />
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table table-striped table-responsive">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.city)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.latestCA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.staffStrenth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ranking)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.risk)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Doc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.balaance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.otherNotes)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.country)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.city)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.latestCA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.staffStrenth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ranking)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.risk)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Doc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.balaance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.otherNotes)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CompanyId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CompanyId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CompanyId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,99 @@
+﻿@model DemoFua.Models.Company
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutInside.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Company</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.country)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.country)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.city)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.city)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.latestCA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.latestCA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.staffStrenth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staffStrenth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ranking)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ranking)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.risk)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.risk)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Doc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Doc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.balaance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.balaance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.otherNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.otherNotes)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CompanyId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

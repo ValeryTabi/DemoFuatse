@@ -1,0 +1,66 @@
+﻿@model IEnumerable<DemoFua.Models.Fund>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutInside.cshtml";
+}
+
+
+
+
+<hr />
+<h2 class="text-center">List of Fund Requests</h2>
+<br />
+
+
+<div class="row">
+    <div class="col-md-offset-0"> <div class="col-md-3">@Html.ActionLink("Create New Request", "Create")|</div><div class="col-md-3">@Html.ActionLink("Create New Company", "Create", "Companies")</div></div>
+   
+</div>
+
+<table class="table table-striped table-responsive">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.company.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.requestDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.industry)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.isGranted)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.company.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.requestDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.industry)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.isGranted)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>
